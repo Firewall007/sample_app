@@ -1,9 +1,6 @@
 #coding: utf-8
 
 require 'spec_helper'
-
-describe "Static pages" do
-
   describe "Home page" do
 
     it "should have the h1 'Sample App'" do
@@ -34,6 +31,12 @@ describe "Static pages" do
 
   describe "About page" do
 
+ #   it "should have the title '<h3>Ruby'" do
+  #    visit '/static_pages/about'
+   #   page.should have_selector('h3',
+    #                :text => 'Hello World')
+    #end
+
     it "should have the h1 'About Us'" do
       visit '/static_pages/about'
       page.should have_selector('h1', :text => 'About Us')
@@ -42,8 +45,6 @@ describe "Static pages" do
     it "should have the title 'About Us'" do
       visit '/static_pages/about'
       page.should have_selector('title',
-                    :text => 'Ruby')
-#                    :text => 'Ruby on Rails Tutorial Sample App | About Us')    
+                    :text => 'About')
     end
-  end
 end
